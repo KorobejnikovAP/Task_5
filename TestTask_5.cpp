@@ -52,6 +52,7 @@ int main() {
 			break;
 		case 8:
 			flag = 0;
+			out.close();
 			break;
 		}
 	}
