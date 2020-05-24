@@ -5,11 +5,11 @@ using namespace std;
 
 int main() {
 	setlocale(LC_CTYPE, "Russian");
-	ofstream out("OutProcCenter.txt");
-	ifstream in("InProcCenter.txt");
+	ifstream in("ProcCenter.txt");
 	ProcCenter cnt(10);
 	in >> cnt;
-	out << cnt;
+	in.close();
+	ofstream out("ProcCenter.txt");
 	Depozit dp(-1);
 	
 	cout << "Îïöèè:" << endl <<
@@ -38,6 +38,7 @@ int main() {
 			break;
 		case 4:
 			dp.opendp(cnt);
+			out << cnt;
 			break;
 		case 5:
 			dp.infodp(cnt);
@@ -47,6 +48,7 @@ int main() {
 			break;
 		case 7:
 			dp.closedp(cnt);
+			out << cnt;
 			break;
 		case 8:
 			flag = 0;
