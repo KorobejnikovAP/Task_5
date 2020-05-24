@@ -4,12 +4,13 @@
 using namespace std;
 
 int main() {
+	setlocale(LC_CTYPE, "Russian");
 	ifstream in("ProcCenter.txt");
 	ProcCenter cnt(10);
 	in >> cnt;
 	in.close();
 	ofstream out("ProcCenter.txt");
-	Depozit dp();
+	Depozit dp;
 	
 	cout << "Опции:" << endl <<
 		"1 авторизация " << endl <<
